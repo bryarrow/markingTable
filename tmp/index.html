@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{template "header".}}
+        <link rel="stylesheet" type="text/css" href="../src/css/index.css">
+    </head>
+    <body style="margin: 0px;background: #f6f6f6;">
+        {{template "top-nav".}}
+        <div id="admin"><button onclick="window.open('./login/admin')">我是管理员<br><small style="color: gray;">上传，管理学生列表</small></button></div>
+        <div id="teacher"><button onclick="window.open('./login/Teacher')">我是助教</button></div>
+        <div id="stuAndParents"><button onclick="window.open('./login/Parents')">我是家长/学生</button></div>
+    </body>
+</html>

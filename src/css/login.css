@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+    background: #f6f6f6;
+}
+
+#loginbox {
+    background: white;
+    width: 535px;
+    margin: auto;
+    margin-top: 200px;
+    -webkit-box-shadow: 0 1px 3px rgba(18,18,18,.1);
+    box-shadow: 0 1px 3px rgba(18,18,18,.1);
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border: 1px solid var(--line_light);
+    border-radius: 6px;
+}
+
+#next,#login {
+    width: 300px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 70px;
+}

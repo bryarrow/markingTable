@@ -1,0 +1,15 @@
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    border-style: hidden;
+    background: white;
+    -webkit-box-shadow: 0 1px 3px 1px rgba(18,18,18,.1);
+    box-shadow: 0 1px 3px 1px rgba(18,18,18,.1);
+    width: 600px;
+    height: 160px;
+    text-align: left;
+    border: 1px solid var(--line_light);
+    border-radius: 6px;
+}

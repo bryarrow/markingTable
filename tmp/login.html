@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{template "header" .}}
+        <link rel="stylesheet" type="text/css" href="../src/css/login.css">
+    </head>
+    <body>
+        {{template "top-nav" .}}
+        <div id="loginbox">
+            {{if eq .Type "admin" "adminNext"}}
+                <h1 style="text-align: center;">管理员登录</h1>
+            {{else if eq .Type "Teacher" "TeacherNext"}}
+                <h1 style="text-align: center;">助教登录</h1>
+            {{else if eq .Type "Parents" "ParentsNext"}}
+                <h1 style="text-align: center;">学生/家长登录</h1>
+            {{end}}
+
+            {{if eq .Type "admin"}}
+                <form name="selectRegion" action="./admin" method="post" style="margin-left: 40px;">
+                    地区：<select name="province">
+                            <option value="sd" selected>山东</option>
+                        </select>
+                        <select name="city">
+                            <option value="wf" selected>潍坊</option>
+                        </select>
+                        <br>
+                        <button id="next">下一步</button>
+                </form>
+            {{else if eq .Type "adminNext"}}
+                <form action="./admin/next" method="post" style="margin-left: 40px;">
+                    {{if eq .IsFirst "True"}}请设置密码：{{else}}请输入密码：{{end}}
+                    <input type="password" name="password">
+                    <br>
+                    <button id="login">{{if eq .IsFirst "True"}}注册并登录{{else}}登录{{end}}</button>
+                </form>
+                
+            {{end}}
+        </div>
+    </body>
+</html>
